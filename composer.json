@@ -1,0 +1,17 @@
+{
+    "name": "alxvgt/afup-symfony-messenger",
+    "description": "AFUP Symfony Messenger",
+    "license": "MIT",
+
+    "require": {
+        "php": ">=7.2",
+        "symfony/messenger": "^4.2",
+        "enqueue/fs": "^0.9.2"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Afup\\": "src/"
+        }
+    }
+}

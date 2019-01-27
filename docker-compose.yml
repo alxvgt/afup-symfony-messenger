@@ -1,0 +1,10 @@
+version: '3'
+services:
+    php:
+        container_name: php
+        build: ./docker/php
+        image: php
+        restart: always
+        entrypoint: /var/www/docker/php/entrypoint.sh
+        volumes:
+            - .:/var/www
