@@ -8,7 +8,7 @@ use Afup\Broker\FsBroker;
 use Afup\Broker\FsBrokerBridge;
 use Symfony\Component\Messenger\Transport\Receiver\ReceiverInterface;
 
-class FsNotificationReceiver implements ReceiverInterface
+class FsMessageReceiver implements ReceiverInterface
 {
 
     /**

@@ -9,7 +9,7 @@ use Afup\Broker\FsBrokerBridge;
 use Symfony\Component\Messenger\Envelope;
 use Symfony\Component\Messenger\Transport\Sender\SenderInterface;
 
-class FsNotificationSender implements SenderInterface
+class FsMessageSender implements SenderInterface
 {
     /**
      * Sends the given envelope.
@@ -25,6 +25,7 @@ class FsNotificationSender implements SenderInterface
         $message = FsBrokerBridge::getBrokerMessage($envelope);
 
         FsBroker::getContext()->createProducer()->send(FsBroker::getQueue(), $message);
+        echo "Message sent \n";
 
         return $envelope;
     }
