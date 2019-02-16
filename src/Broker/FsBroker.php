@@ -32,7 +32,6 @@ class FsBroker
      */
     public static function getQueue()
     {
-        static::$queue = static::$queue ?? static::$context->createQueue('afup');
-        return static::$queue;
+        return static::$queue ?? static::$context->createQueue('afup');
     }
 }
